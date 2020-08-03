@@ -1,0 +1,246 @@
+#app {
+  font-family: "Public Sans", sans-serif;
+}
+
+$border-color: #d0d0d0;
+$primary-color: #b81830;
+$dark-text-color: #181818;
+$page-section-color: #f4f4f4;
+
+html,
+body {
+  background-color: $border-color;
+  margin: 0;
+}
+
+a {
+  color: $dark-text-color;
+  text-decoration: none;
+}
+
+header {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  margin: auto;
+}
+img {
+  align-self: center;
+}
+.top-header {
+  background-color: black;
+  height: 35px;
+  width: 100%;
+  display: flex;
+}
+
+.language {
+  display: flex;
+}
+.header-icons {
+  display: flex;
+  margin-left: auto;
+  height: 100%;
+  justify-content: space-around;
+  align-content: center;
+  width: 8%;
+}
+
+.icon {
+  height: auto;
+  max-width: 98%;
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon.mobile {
+  display: none;
+}
+
+.shopping-cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  background-color: $primary-color;
+}
+
+.cart-count {
+  color: white;
+}
+
+.bottom-header {
+  display: flex;
+  background-color: white;
+  box-shadow: 0 8px 6px -6px grey;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  align-items: center;
+}
+
+.navbar__link {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+}
+
+.dropdown--active {
+  color: $primary-color;
+  border-bottom: 3px solid $primary-color;
+}
+
+.dropdown {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  justify-content: space-evenly;
+}
+
+.dropdown-link {
+  padding-left: 30px;
+}
+
+button {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: black;
+  color: white;
+}
+
+.search {
+  display: flex;
+  font-family: "Public Sans", sans-serif;
+  margin-left: auto;
+  width: 8%;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    min-width: 1000px;
+  }
+}
+@media screen and (max-width: 601px) {
+  header {
+    width: 100%;
+  }
+  .top-header-mobile {
+    background-color: white;
+    height: 55px;
+    display: flex;
+    align-items: center;
+  }
+  .top-header {
+    display: none;
+  }
+  .language {
+    display: none;
+  }
+  .header-icons {
+    display: flex;
+    margin-left: unset;
+    border: black 1px solid;
+    height: 100%;
+  }
+  .icon.desktop {
+    display: none;
+  }
+  .icon.mobile {
+    display: inline-flex;
+    align-items: center;
+  }
+  .icon-mobile-container {
+    display: flex;
+    position: absolute;
+    right: 3%;
+  }
+  .shopping-cart-container {
+    background-color: white;
+  }
+  .cart-count {
+    color: black;
+  }
+  .bottom-header {
+    display: none;
+  }
+
+  .mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-menu-bar {
+    height: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .mobile-links {
+    background-color: white;
+    padding: 15px;
+    border-top: $border-color 1px solid;
+    border-bottom: $border-color 1px solid;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mobile-links.detail {
+    justify-content: flex-start;
+  }
+
+  .mobile-general-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: $page-section-color;
+  }
+  .mobile-general-link {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+  }
+  img.general-icon {
+    padding-right: 15px;
+  }
+
+  .mobile-link-detail {
+    background-color: $page-section-color;
+    padding: 15px;
+    border-top: $border-color 1px solid;
+    border-bottom: $border-color 1px solid;
+    display: flex;
+    justify-content: space-between;
+  }
+  .hide {
+    display: none;
+  }
+}
